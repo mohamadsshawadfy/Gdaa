@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تنسيق حدائق جدة - خدمات متكاملة للحدائق والمساحات الخارجية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #7cb342;
+            --accent-color: #f9a825;
+            --light-color: #f1f8e9;
+            --dark-color: #1b5e20;
+            --text-color: #333;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: 70px;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 15px auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: var(--dark-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        /* الهيدر المصغر */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 70px;
+            transition: var(--transition);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 5px;
+        }
+        
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .logo h1 {
+            font-size: 20px;
+            margin: 0;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        /* قائمة الهامبرغر */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            position: absolute;
+            left: 5px;
+        }
+        
+        .menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 2px 0;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+        
+        nav {
+            transition: var(--transition);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 15px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* الهيرو سيكشن مع صورة */
+        .hero {
+            background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://iili.io/KJvnd8J.md.jpg') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            align-items: center;
+            min-height: 80vh;
+        }
+        
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        
+        .hero-content {
+            flex: 1;
+        }
+        
+        .hero-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* الخدمات - 2 كارت لكل صف */
+        .services {
+            background-color: white;
+        }
+        
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            width: calc(50% - 25px);
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        @media (max-width: 768px) {
+            .service-card {
+                width: 100%;
+            }
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-img {
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .service-content p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 14px;
+            flex-grow: 1;
+        }
+        
+        .service-content .btn {
+            align-self: flex-start;
+            margin-top: auto;
+        }
+        
+        /* آراء العملاء */
+        .testimonials {
+            background-color: var(--light-color);
+        }
+        
+        .testimonials-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            width: calc(50% - 25px);
+        }
+        
+        @media (max-width: 768px) {
+            .testimonial-card {
+                width: 100%;
+            }
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            line-height: 1.8;
+        }
+        
+        .testimonial-text:before {
+            content: """;
+            font-size: 60px;
+            color: var(--secondary-color);
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            opacity: 0.2;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 15px;
+        }
+        
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+        
+        .author-info p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* مناطق الخدمة - بدون أيقونات */
+        .areas {
+            background: white;
+        }
+        
+        .areas-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .area-card {
+            background: var(--light-color);
+            padding: 15px 25px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .area-card:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        /* معرض الصور */
+        .gallery {
+            background-color: var(--light-color);
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 250px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-item-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            padding: 20px;
+            color: white;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover .gallery-item-overlay {
+            opacity: 1;
+        }
+        
+        /* قسم الفيديوهات الجديد */
+        .videos {
+            background-color: white;
+        }
+        
+        .videos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            
+        }
+        
+        .video-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+            cursor: pointer;
+            height: 250px;
+            width:100%;
+        }
+        
+        .video-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .video-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .video-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .video-play-btn i {
+            color: var(--primary-color);
+            font-size: 24px;
+            margin-right: -3px;
+        }
+        
+        .video-item:hover .video-play-btn {
+            background: var(--primary-color);
+        }
+        
+        .video-item:hover .video-play-btn i {
+            color: white;
+        }
+        
+        .video-item-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            padding: 20px;
+            color: white;
+        }
+        
+        .video-item-overlay h3 {
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        /* نافذة الفيديو المنبثقة - تم التعديل لتصبح ملء الشاشة */
+        .video-fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .video-fullscreen iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .close-fullscreen {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 10000;
+            background: rgba(0,0,0,0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* الفوتر */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 20px;
+            position: relative;
+            font-size: 18px;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: var(--accent-color);
+            margin-top: 10px;
+        }
+        
+        .footer-col p {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 14px;
+        }
+        
+        .footer-col ul li a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+        
+        /* زر واتساب عائم محسن */
+        .whatsapp-float {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 25px;
+            left: 25px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            bottom: 15px;
+            background: white;
+            color: #075E54;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 75px;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        /* القائمة الجانبية للهاتف */
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            right: -300px;
+            width: 300px;
+            height: calc(100vh - 70px);
+            background: white;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            z-index: 999;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+            transition: var(--transition);
+        }
+        
+        .mobile-menu ul {
+            list-style: none;
+        }
+        
+        .mobile-menu ul li {
+            margin-bottom: 15px;
+        }
+        
+        .mobile-menu ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            transition: var(--transition);
+        }
+        
+        .mobile-menu ul li a:hover {
+            color: var(--primary-color);
+            padding-right: 10px;
+        }
+        
+        /* إغلاق القائمة عند النقر خارجها */
+        .overlay {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 70px);
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 998;
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* نماذج تفاصيل الخدمات */
+        .service-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .service-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+            transition: var(--transition);
+        }
+        
+        .close-modal:hover {
+            color: var(--primary-color);
+        }
+        
+        .modal-header {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .modal-header h3 {
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+        
+        .modal-body {
+            margin-bottom: 25px;
+        }
+        
+        .modal-body p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .modal-features {
+            margin: 20px 0;
+        }
+        
+        .modal-features h4 {
+            color: var(--dark-color);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .modal-features ul {
+            list-style: none;
+            padding-right: 20px;
+        }
+        
+        .modal-features li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        .modal-features li:before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: 10px;
+        }
+        
+        .modal-footer {
+            text-align: center;
+        }
+        
+        /* التجاوب مع الشاشات المختلفة */
+        @media (max-width: 992px) {
+            .menu-toggle {
+                display: flex;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .hero-image {
+                margin-top: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .service-card {
+                width: 100%;
+            }
+            
+            .testimonial-card {
+                width: 100%;
+            }
+            
+            .whatsapp-tooltip {
+                display: none;
+            }
+            
+            .videos-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo h1 {
+                font-size: 18px;
+            }
+            
+            .hero-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                padding: 20px 15px;
+            }
+            
+            .close-fullscreen {
+                top: 10px;
+                right: 10px;
+                width: 40px;
+                height: 40px;
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- الهيدر المصغر -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h1>تنسيق حدائق جدة</h1>
+            </div>
+            
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#testimonials">آراء العملاء</a></li>
+                    <li><a href="#gallery">معرض الصور</a></li>
+                    <li><a href="#videos">معرض الفيديوهات</a></li>
+                    <li><a href="#areas">مناطق الخدمة</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- القائمة الجانبية للجوال -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#testimonials">آراء العملاء</a></li>
+            <li><a href="#gallery">معرض الصور</a></li>
+            <li><a href="#videos">معرض الفيديوهات</a></li>
+            <li><a href="#areas">مناطق الخدمة</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+    </div>
+    
+    <!-- overlay لإغلاق القائمة -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- الهيرو سيكشن مع صورة -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h2>جمال الطبيعة يبدأ من حديقتك</h2>
+                <p>نقدم حلولاً متكاملة لتنسيق الحدائق والمساحات الخارجية بمهنية عالية وأسعار مناسبة. فريقنا من الخبراء يصمم وينفذ مشاريع تزيد من جمال وقيمة مساحتك الخارجية.</p>
+                <a href="https://wa.me/+966535734807" class="btn">اطلب خدمتك الآن</a>
+            </div>
+            <div class="hero-image">
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- الخدمات -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا المتكاملة</h2>
+            <div class="services-container">
+                <!-- خدمة 1 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://iili.io/KJvZ9Tv.md.jpg" alt="تنسيق الحدائق">
+                    </div>
+                    <div class="service-content">
+                        <h3>تنسيق الحدائق</h3>
+                        <p>تصميم وتنفيذ حدائق مبتكرة تناسب مساحتك وذوقك بأفضل النباتات والأشجار</p>
+                        <a href="#" class="btn service-details-btn" data-service="1">تفاصيل الخدمة</a>
+                    </div>
+                </div>
+                
+                <!-- خدمة 2 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://iili.io/KJvb8ox.md.jpg" alt="الغرف الزجاجية">
+                    </div>
+                    <div class="service-content">
+                        <h3>الغرف الزجاجية</h3>
+                        <p>تصميم وتنفيذ غرف زجاجية أنيقة تمنحك الاستمتاع بالطبيعة في جميع الفصول</p>
+                        <a href="#" class="btn service-details-btn" data-service="2">تفاصيل الخدمة</a>
+                    </div>
+                </div>
+                
+                <!-- خدمة 3 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://iili.io/KJvpahG.md.jpg" alt="جلسات خارجية">
+                    </div>
+                    <div class="service-content">
+                        <h3>جلسات خارجية</h3>
+                        <p>تصميم وتنفيذ جلسات خارجية مريحة وجميلة تناسب احتياجاتك وأذواقك</p>
+                        <a href="#" class="btn service-details-btn" data-service="3">تفاصيل الخدمة</a>
+                    </div>
+                </div>
+                
+                <!-- خدمة 4 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://iili.io/KJ89Mbe.md.jpg" alt="المظلات والسواتر">
+                    </div>
+                    <div class="service-content">
+                        <h3>تنفيذ المظلات والسواتر</h3>
+                        <p>تركيب مظلات وسواتر عالية الجودة تحميك من أشعة الشمس وتوفر الخصوصية</p>
+                        <a href="#" class="btn service-details-btn" data-service="4">تفاصيل الخدمة</a>
+                    </div>
+                </div>
+                
+                <!-- خدمة 5 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.pexels.com/photos/33412528/pexels-photo-33412528.jpeg" alt="شبكات الري">
+                    </div>
+                    <div class="service-content">
+                        <h3>تركيب شبكات الري</h3>
+                        <p>تركيب شبكات ري عادية وأوتوماتيكية لتوفير المياه والحفاظ على نضارة النباتات</p>
+                        <a href="#" class="btn service-details-btn" data-service="5">تفاصيل الخدمة</a>
+                    </div>
+                </div>
+                
+                <!-- خدمة 6 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://iili.io/KJ8d8eS.md.jpg" alt="قص الأشجار">
+                    </div>
+                    <div class="service-content">
+                        <h3>قص الأشجار</h3>
+                        <p>خدمة قص وتشذيب الأشجار بمهنية عالية وباستخدام أحدث المعدات والآلات</p>
+                        <a href="#" class="btn service-details-btn" data-service="6">تفاصيل الخدمة</a>
+                    </div>
+                </div>
+                
+                <!-- خدمة 7 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://iili.io/KJ83hlf.jpg" alt="العشب الصناعي">
+                    </div>
+                    <div class="service-content">
+                        <h3>تركيب العشب الصناعي</h3>
+                        <p>تركيب عشب صناعي عالي الجودة يضفي جمالاً دائماً على مساحتك الخارجية</p>
+                        <a href="#" class="btn service-details-btn" data-service="7">تفاصيل الخدمة</a>
+                    </div>
+                </div>
+                
+                <!-- خدمة 8 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://iili.io/KJ8KXyl.md.jpg" alt="عشب ملاعب كرة القدم">
+                    </div>
+                    <div class="service-content">
+                        <h3>تركيب عشب ملاعب كرة القدم</h3>
+                        <p>تركيب عشب طبيعي أو صناعي خاص بملاعب كرة القدم وفق المعايير الدولية</p>
+                        <a href="#" class="btn service-details-btn" data-service="8">تفاصيل الخدمة</a>
+                    </div>
+                </div>
+                
+                <!-- خدمة 9 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://iili.io/KJ8qn0g.md.jpg" alt="بديل الخشب">
+                    </div>
+                    <div class="service-content">
+                        <h3>تركيب بديل الخشب</h3>
+                        <p>تركيب أرضيات بديلة للخشب مقاومة للعوامل الجوية ومناسبة للمساحات الخارجية</p>
+                        <a href="#" class="btn service-details-btn" data-service="9">تفاصيل الخدمة</a>
+                    </div>
+                </div>
+                
+                <!-- خدمة 10 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.pexels.com/photos/17878582/pexels-photo-17878582.jpeg" alt="زراعة النخيل">
+                    </div>
+                    <div class="service-content">
+                        <h3>زراعة النخيل</h3>
+                        <p>خدمة زراعة النخيل بأنواعه المختلفة بأساليب علمية حديثة وضمان成活يتها</p>
+                        <a href="#" class="btn service-details-btn" data-service="10">تفاصيل الخدمة</a>
+                    </div>
+                </div>
+                
+                <!-- خدمة 11 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.pexels.com/photos/29236338/pexels-photo-29236338.jpeg" alt="زراعة الورود">
+                    </div>
+                    <div class="service-content">
+                        <h3>زراعة الورود</h3>
+                        <p>زراعة الورود والنباتات الزينة المختلفة بأساليب مبتكرة تضمن إزهاراً مستمراً</p>
+                        <a href="#" class="btn service-details-btn" data-service="11">تفاصيل الخدمة</a>
+                    </div>
+                </div>
+                
+                <!-- خدمة 12 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.pexels.com/photos/5825767/pexels-photo-5825767.jpeg" alt="الشلالات والنوافير">
+                    </div>
+                    <div class="service-content">
+                        <h3>تنفيذ الشلالات والنوافير</h3>
+                        <p>تصميم وتنفيذ شلالات ونوافير مائية تضيف لمسة جمالية واسترخاء لمساحتك</p>
+                        <a href="#" class="btn service-details-btn" data-service="12">تفاصيل الخدمة</a>
+                    </div>
+                </div>
+                
+                <!-- خدمة 13 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="بيوت ساندويتش بانل">
+                    </div>
+                    <div class="service-content">
+                        <h3>تنفيذ بيوت ساندويتش بانل</h3>
+                        <p>تنفيذ بيوت باستخدام تقنية الساندويتش بانل بدون خرسانات أو بناء تقليدي</p>
+                        <a href="#" class="btn service-details-btn" data-service="13">تفاصيل الخدمة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- آراء العملاء -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">آراء عملائنا</h2>
+            <div class="testimonials-container">
+                <!-- رأي 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>تعاملت مع شركة تنسيق حدائق جدة لتنفيذ حديقة منزلي وكنت سعيداً جداً بالنتيجة، فريق محترف وخدمة ممتازة. أنصح الجميع بالتعامل معهم.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="أحمد السعدي">
+                        </div>
+                        <div class="author-info">
+                            <h4>أحمد السعدي</h4>
+                            <p>جدة</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- رأي 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>نفذت الشركة لي غرفة زجajية رائعة في الحديقة، أصبحت مكاني المفضل للاسترخاء، شكراً لكم على الجودة والإبداع في التصميم.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="سارة محمد">
+                        </div>
+                        <div class="author-info">
+                            <h4>سارة محمد</h4>
+                            <p>جدة</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- رأي 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>فريق العمل ممتاز في تركيب شبكات الري الأوتوماتيكية، وفرت لي الوقت والجهد في ري الحديقة، والنتيجة كانت رائعة.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="محمد العتيبي">
+                        </div>
+                        <div class="author-info">
+                            <h4>محمد العتيبي</h4>
+                            <p>مكة</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- رأي 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>استفدت من خدمة تركيب العشب الصناعي وكانت النتيجة مبهرة، الحديقة أصبحت خضراء طوال العام دون مجهود.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="فاطمة أحمد">
+                        </div>
+                        <div class="author-info">
+                            <h4>فاطمة أحمد</h4>
+                            <p>الرياض</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- رأي 5 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>خدمة تشذيب الأشجار كانت ممتازة، الفريق محترف ويعمل بدقة عالية، أنصح بالتعامل معهم.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="خالد الحربي">
+                        </div>
+                        <div class="author-info">
+                            <h4>خالد الحربي</h4>
+                            <p>الدمام</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- رأي 6 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>نفذت الشركة لي مظلة وسور خارجي بجودة عالية وتصميم راقي، وأسعارهم مناسبة compared بالجودة المقدمة.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="نورة السليم">
+                        </div>
+                        <div class="author-info">
+                            <h4>نورة السليم</h4>
+                            <p>جدة</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- رأي 7 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>خدمة زراعة النخيل ممتازة، والنخيل الذي زرعوه نما بشكل صحي وجميل، شكراً لكم على الاحترافية.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="سعود الغامدي">
+                        </div>
+                        <div class="author-info">
+                            <h4>سعود الغامدي</h4>
+                            <p>الطائف</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- رأي 8 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>الشلال الذي صممته الشركة في حديقتي أصبح محط إعجاب جميع الزوار، تصميم إبداعي وجودة تنفيذ عالية.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="لطيفة الفهد">
+                        </div>
+                        <div class="author-info">
+                            <h4>لطيفة الفهد</h4>
+                            <p>الخبر</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- رأي 9 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>جلسة الحديقة الخارجية التي صمموها لي كانت فوق التوقعات، المواد المستخدمة عالية الجودة والتنفيذ دقيق.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/38.jpg" alt="فهد الزهراني">
+                        </div>
+                        <div class="author-info">
+                            <h4>فهد الزهراني</h4>
+                            <p>جدة</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- رأي 10 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>بيت الساندويتش بانل الذي نفذته الشركة كان حلاً مثالياً لمكتبي في الحديقة، سريع التنفيذ وعالي الجودة.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/62.jpg" alt="أمل الراجحي">
+                        </div>
+                        <div class="author-info">
+                            <h4>أمل الراجحي</h4>
+                            <p>الرياض</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- معرض الصور -->
+     <section class="gallery" id="gallery">
+      <div class="container">
+          <h2 class="section-title">معرض أعمالنا</h2>
+          <div class="gallery-container">
+              <div class="gallery-item">
+                  <img src="https://iili.io/KJQ4RYQ.md.jpg" alt="مشروع تنسيق حدائق">
+                  <div class="gallery-item-overlay">
+                      <h3>تنسيق حدائق حديث</h3>
+                  </div>
+              </div>
+              
+              <div class="gallery-item">
+                  <img src="https://iili.io/KJQPo0b.md.jpg" alt="غرفة زجاجية">
+                  <div class="gallery-item-overlay">
+                      <h3>غرفة زجاجية فاخرة</h3>
+                  </div>
+              </div>
+              
+              <div class="gallery-item">
+                  <img src="https://iili.io/KJQiCTN.md.jpg" alt="جلسة خارجية">
+                  <div class="gallery-item-overlay">
+                      <h3>جلسة خارجية مريحة</h3>
+                  </div>
+              </div>
+              
+              <div class="gallery-item">
+                  <img src="https://iili.io/KJQsqKu.md.jpg" alt="مظلات وسواتr">
+                  <div class="gallery-item-overlay">
+                      <h3>مظلة أنيقة</h3>
+                  </div>
+              </div>
+              
+              <div class="gallery-item">
+                  <img src="https://iili.io/KJQsyqF.md.jpg" alt="شبكة ري">
+                  <div class="gallery-item-overlay">
+                      <h3>شبكة ري أوتوماتيكية</h3>
+                  </div>
+              </div>
+              
+              <div class="gallery-item">
+                  <img src="https://iili.io/KJvnd8J.md.jpg" alt="تشذيب أشجار">
+                  <div class="gallery-item-overlay">
+                      <h3>تشذيب أشجار محترف</h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+    <!-- قسم الفيديوهات الجديد -->
+    <section class="videos" id="videos">
+        <div class="container">
+            <h2 class="section-title">معرض الفيديوهات</h2>
+            <div class="videos-container">
+                <div class="video-item" data-video="1.mp4">
+                    <img src="https://iili.io/KJQ4RYQ.md.jpg" alt="فيديو تنسيق حدائق">
+                    <div class="video-play-btn">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-item-overlay">
+                        <h3>تنسيق حدائق حديثة</h3>
+                        <p>مشروع حديث في شمال جدة</p>
+                    </div>
+                </div>
+                <div class="video-item" data-video="2.mp4">
+                    <img src="https://images.pexels.com/photos/674580/pexels-photo-674580.jpeg" alt="فيديو غرف زجاجية">
+                    <div class="video-play-btn">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-item-overlay">
+                        <h3>غرفة زجاجية فاخرة</h3>
+                        <p>تنفيذ غرفة زجاجية متكاملة</p>
+                    </div>
+                </div>
+                <div class="video-item" data-video="3.mp4">
+                    <img src="https://images.pexels.com/photos/6662598/pexels-photo-6662598.jpeg" alt="فيديو شلالات ونوافير">
+                    <div class="video-play-btn">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-item-overlay">
+                        <h3>شلال صناعي حديث</h3>
+                        <p>تصميم وتنفيذ شلالات مائية</p>
+                    </div>
+                </div>
+                                <div class="video-item" data-video="4.mp4">
+                    <img src="https://images.pexels.com/photos/59321/pexels-photo-59321.jpeg" alt="فيديو تنسيق حدائق">
+                    <div class="video-play-btn">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-item-overlay">
+                        <h3>تنسيق حدائق حديثة</h3>
+                        <p>مشروع حديث في شمال جدة</p>
+                    </div>
+                </div>
+                                <div class="video-item" data-video="5.mp4">
+                    <img src="https://images.pexels.com/photos/19946934/pexels-photo-19946934.jpeg" alt="فيديو تنسيق حدائق">
+                    <div class="video-play-btn">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="video-item-overlay">
+                        <h3>تنسيق حدائق حديثة</h3>
+                        <p>مشروع حديث في شمال جدة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- نافذة الفيديو ملء الشاشة -->
+    <div class="video-fullscreen" id="videoFullscreen" style="display: none;">
+        <span class="close-fullscreen">&times;</span>
+        <iframe id="fullscreenVideo" width="100%" height="100%" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+
+    <!-- مناطق الخدمة -->
+    <section class="areas" id="areas">
+        <div class="container">
+            <h2 class="section-title">مناطق الخدمة</h2>
+            <div class="areas-container">
+                <div class="area-card">جدة</div>
+                <div class="area-card">مكة</div>
+                <div class="area-card">الرياض</div>
+                <div class="area-card">الدمام</div>
+                <div class="area-card">الخبر</div>
+                <div class="area-card">المدينة</div>
+                <div class="area-card">الطائف</div>
+                <div class="area-card">تبوك</div>
+                <div class="area-card">ابها</div>
+                <div class="area-card">خميس مشيط</div>
+                <div class="area-card">حائل</div>
+                <div class="area-card">الباحة</div>
+                <div class="area-card">نجران</div>
+                <div class="area-card">الجوف</div>
+                <div class="area-card">القطيف</div>
+                <div class="area-card">ينبع</div>
+                <div class="area-card">الظهران</div>
+                <div class="area-card">عرعر</div>
+                <div class="area-card">سكاكا</div>
+                <div class="area-card">جازان</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer id="contact">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>عن الشركة</h3>
+                <p>تنسيق حدائق جدة، نقدم حلولاً متكاملة ومبتكرة بتصاميم تناسب جميع الأذواق والميزانيات في جميع أنحاء المملكة.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#testimonials">آراء العملاء</a></li>
+                    <li><a href="#gallery">معرض الصور</a></li>
+                    <li><a href="#videos">معرض الفيديوهات</a></li>
+                    <li><a href="#areas">مناطق الخدمة</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>خدماتنا</h3>
+                <ul>
+                    <li><a href="#">تنسيق الحدائق</a></li>
+                    <li><a href="#">الغرف الزجاجية</a></li>
+                    <li><a href="#">جلسات خارجية</a></li>
+                    <li><a href="#">المظلات والسواتر</a></li>
+                    <li><a href="#">شبكات الري</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>اتصل بنا</h3>
+                <p><i class="fas fa-map-marker-alt"></i> جدة، المملكة العربية السعودية</p>
+                <p><i class="fas fa-phone"></i> +966 53 573 4807</p>
+                
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>جميع الحقوق محفوظة &copy; تنسيق حدائق جدة 2023</p>
+        </div>
+    </footer>
+
+    <!-- نماذج تفاصيل الخدمات -->
+    <div class="service-modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h3 id="modalTitle">عنوان الخدمة</h3>
+            </div>
+            <div class="modal-body">
+                <p id="modalDescription">وصف مفصل للخدمة يظهر هنا...</p>
+                <div class="modal-features">
+                    <h4>مميزات الخدمة:</h4>
+                    <ul id="modalFeatures">
+                        <li>ميزة واحدة</li>
+                        <li>ميزة ثانية</li>
+                        <li>ميزة ثالثة</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://wa.me/+966535734807" class="btn" target="_blank">اطلب الخدمة عبر الواتساب</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- زر واتساب عائم محسن -->
+    <a href="https://wa.me/+966535734807" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">تواصل معنا عبر الواتساب</span>
+    </a>
+
+    <script>
+        // كود الجافاسكريبت للقائمة الجانبية
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+        
+        overlay.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+        
+        // إغلاق القائمة عند النقر على رابط
+        const mobileLinks = document.querySelectorAll('.mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        });
+        
+        // تغيير لون الهيدر عند التمرير
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // بيانات الخدمات
+        const services = {
+            1: {
+                title: "تنسيق الحدائق",
+                description: "نقدم خدمة تنسيق الحدائق بتصاميم مبتكرة تناسب مساحتك وذوقك، باستخدام أفضل النباتات والأشجار المحلية والمستوردة التي تتناسب مع مناخ المملكة. نضمن لك حديقة خضراء جميلة طوال العام.",
+                features: [
+                    "تصميم حديث ومبتكر للحدائق",
+                    "استخدام نباتات محلية ومستوردة عالية الجودة",
+                    "مراعاة الظروف المناخية والتربة",
+                    "صيانة دورية وضمان على النباتات",
+                    "أسعار مناسبة وتنافسية"
+                ]
+            },
+            2: {
+                title: "الغرف الزجاجية",
+                description: "تصميم وتنفيذ غرف زجاجية أنيقة تمنحك الاستمتاع بالطبيعة في جميع الفصول. نستخدم أحدث التقنيات والمواد العازلة للحرارة لتوفير جو مريح داخل الغرفة في جميع الأحوال الجوية.",
+                features: [
+                    "تصاميم عصرية وأنيقة",
+                    "زجاج عازل للحرارة والصوت",
+                    "تركيب محترف وتشطيبات دقيقة",
+                    "خيارات متعددة من الأحجام والتصاميم",
+                    "ضمان على المواد والتركيب"
+                ]
+            },
+            3: {
+                title: "جلسات خارجية",
+                description: "نصمم وننفذ جلسات خارجية مريحة وجميلة تناسب احتياجاتك وأذواقك. نستخدم مواد عالية الجودة مقاومة للعوامل الجوية لضمان متانة وديمومة الجلسات.",
+                features: [
+                    "تصاميم مبتكرة تناسب المساحة المتاحة",
+                    "استخدام مواد عالية الجودة مقاومة للعوامل الجوية",
+                    "تشكيلة واسعة من الأثاث والديكورات",
+                    "تركيب محترف واهتمام بالتفاصيل",
+                    "صيانة دورية وخدمة ما بعد البيع"
+                ]
+            },
+            4: {
+                title: "تنفيذ المظلات والسواتر",
+                description: "نقوم بتركيب مظلات وسواتر عالية الجودة تحميك من أشعة الشمس وتوفر الخصوصية لممتلكاتك. نستخدم أحدث التقنيات ومواد ذات جودة عالية لضمان المتانة والجمال.",
+                features: [
+                    "تشكيلة واسعة من designs المظلات والسواتر",
+                    "مواد عالية الجودة مقاومة للأشعة UV",
+                    "تركيب محترف بمعايير السلامة",
+                    "تصاميم تناسب مختلف الأذواق والمساحات",
+                    "ضمان على المواد والتركيب"
+                ]
+            },
+            5: {
+                title: "تركيب شبكات الري",
+                description: "نقدم خدمة تركيب شبكات ري عادية وأوتوماتيكية لتوفير المياه والحفاظ على نضارة النباتات. نستخدم أحدث أنظمة الري التي توفر في استهلاك المياه وتضمن وصولها بشكل منتظم للنباتات.",
+                features: [
+                    "أنظمة ري أوتوماتيكية متطورة",
+                    "توفير في استهلاك المياه",
+                    "ضمان وصول الماء لجميع النباتات بشكل متساو",
+                    "صيانة دورية لأنظمة الري",
+                    "تركيب محترف بمعايير الجودة العالمية"
+                ]
+            },
+            6: {
+                title: "قص الأشجار",
+                description: "نقدم خدمة قص وتشذيب الأشجار بمهنية عالية وباستخدام أحدث المعدات والآلات. فريقنا مدرب على تقنيات التشذيب الصحيحة التي تحافظ على صحة الأشجار وتزيد من جمالها.",
+                features: [
+                    "استخدام أحدث المعدات والآلات",
+                    "فريق مدرب على أعلى مستوى",
+                    "تشذيب صحي يحافظ على نمو الأشجار",
+                    "التخلص الآمن من مخلفات التقليم",
+                    "أسعار مناسبة وجودة عالية"
+                ]
+            },
+            7: {
+                title: "تركيب العشب الصناعي",
+                description: "نقوم بتركيب عشب صناعي عالي الجودة يضفي جمالاً دائماً على مساحتك الخارجية. نستخدم أنواعاً ممتازة من العشب الصناعي تبدو طبيعية وتتحمل الاستخدام المكثف.",
+                features: [
+                    "عشب صناعي عالي الجودة ذو مظهر طبيعي",
+                    "تركيب محترف مع طبقة عازلة تحته",
+                    "مقاوم للعوامل الجوية والأشعة UV",
+                    "سهل الصيانة ولا يحتاج إلى ري",
+                    "ضمان على المواد والتركيب"
+                ]
+            },
+            8: {
+                title: "تركيب عشب ملاعب كرة القدم",
+                description: "نختص بتركيب عشب طبيعي أو صناعي خاص بملاعب كرة القدم وفق المعايير الدولية. نضمن لك ملعباً مثالياً وآمناً للاعبين بمستوى يلبي توقعاتك.",
+                features: [
+                    "التزام تام بالمواصفات والمعايير الدولية",
+                    "خيارات متعددة من العشب الطبيعي والصناعي",
+                    "تصميم خطوط الملعب وفق القياسات الرسمية",
+                    "أنظمة تصريف مياه متطورة",
+                    "ضمان على الجودة والسلامة"
+                ]
+            },
+            9: {
+                title: "تركيب بديل الخشب",
+                description: "نقدم خدمة تركيب أرضيات بديلة للخشب مقاومة للعوامل الجوية ومناسبة للمساحات الخارجية. هذه الأرضيات تعطي مظهر الخشب الطبيعي مع متانة أعلى وتكلفة صيانة أقل.",
+                features: [
+                    "مظهر أنيق يشبه الخشب الطبيعي",
+                    "مقاوم للعوامل الجوية والرطوبة",
+                    "لا يحتاج إلى صيانة دورية مثل الخشب",
+                    "متعدد الاستخدامات في المساحات الخارجية",
+                    "خيارات متعددة من الألوان والتصاميم"
+                ]
+            },
+            10: {
+                title: "زراعة النخيل",
+                description: "نقدم خدمة زراعة النخيل بأنواعه المختلفة بأساليب علمية حديثة وضمان成活يتها. لدينا خبرة واسعة في زراعة جميع أنواع النخيل المحلي والمستورد.",
+                features: [
+                    "خبرة في زراعة جميع أنواع النخيل",
+                    "أساليب زراعة علمية حديثة",
+                    "ضمان على成活ية النخيل المزروع",
+                    "نخيل عالي الجودة من مشاتل موثوقة",
+                    "خدمة صيانة دورية للنخيل المزروع"
+                ]
+            },
+            11: {
+                title: "زراعة الورود",
+                description: "نختص بزراعة الورود والنباتات الزينة المختلفة بأساليب مبتكرة تضمن إزهاراً مستمراً طوال العام. نقدم تشكيلة واسعة من الورود المحلية والمستوردة.",
+                features: [
+                    "تشكيلة واسعة من الورود والنباتات الزينة",
+                    "أساليب زراعة تضمن إزهاراً مستمراً",
+                    "نصائح للعناية بالورود والنباتات",
+                    "ضمان على جودة النباتات المزروعة",
+                    "خدمة صيانة دورية للنباتات"
+                ]
+            },
+            12: {
+                title: "تنفيذ الشلالات والنوافير",
+                description: "نصمم وننفذ شلالات ونوافير مائية تضيف لمسة جمالية واسترخاء لمساحتك. نستخدم تقنيات متطورة لضمان جريان الماء بشكل طبيعي وهادئ.",
+                features: [
+                    "تصاميم إبداعية تناسب المساحة المتاحة",
+                    "أنظمة تدفق مياه هادئة وطبيعية",
+                    "إضاءة متطورة تضفي جمالاً إضافياً ليلاً",
+                    "مواد عالية الجودة مقاومة للماء",
+                    "صيانة دورية وضمان على الأداء"
+                ]
+            },
+            13: {
+                title: "تنفيذ بيوت ساندويتش بانل",
+                description: "ننفذ بيوتاً باستخدام تقنية الساندويتش بانل بدون خرسانات أو بناء تقليدي. هذه التقنية توفر وقت التنفيذ وتكاليف البمع الحفاظ على جودة عالية.",
+                features: [
+                    "تنفيذ سريع compared بالبناء التقليدي",
+                    "عزل حراري وصوتي ممتاز",
+                    "تصاميم عصرية وقابلة للتخصيص",
+                    "مواد خفيفة الوزن ومقاومة للحريق",
+                    "ضمان على الهيكل والمواد"
+                ]
+            }
+        };
+
+        // إدارة النماذج المنبثقة للخدمات
+        const serviceModal = document.getElementById('serviceModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalFeatures = document.getElementById('modalFeatures');
+        const closeModal = document.querySelector('.close-modal');
+        const serviceDetailButtons = document.querySelectorAll('.service-details-btn');
+
+        // فتح النموذج المنبثق عند النقر على زر التفاصيل
+        serviceDetailButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const serviceId = this.getAttribute('data-service');
+                const service = services[serviceId];
+                
+                if (service) {
+                    modalTitle.textContent = service.title;
+                    modalDescription.textContent = service.description;
+                    
+                    // تفريغ قائمة الميزات الحالية
+                    modalFeatures.innerHTML = '';
+                    
+                    // إضافة الميزات الجديدة
+                    service.features.forEach(feature => {
+                        const li = document.createElement('li');
+                        li.textContent = feature;
+                        modalFeatures.appendChild(li);
+                    });
+                    
+                    // إظهار النموذج المنبثق
+                    serviceModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // إغلاق النموذج المنبثق
+        closeModal.addEventListener('click', function() {
+            serviceModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // إغلاق النموذج عند النقر خارج المحتوى
+        serviceModal.addEventListener('click', function(e) {
+            if (e.target === serviceModal) {
+                serviceModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // إدارة نافذة الفيديو ملء الشاشة
+        const videoFullscreen = document.getElementById('videoFullscreen');
+        const fullscreenVideo = document.getElementById('fullscreenVideo');
+        const closeFullscreen = document.querySelector('.close-fullscreen');
+        const videoItems = document.querySelectorAll('.video-item');
+
+        // فتح نافذة الفيديو عند النقر على عنصر الفيديو
+        videoItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const videoUrl = this.getAttribute('data-video') + '?autoplay=1';
+                fullscreenVideo.src = videoUrl;
+                videoFullscreen.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // إغلاق نافذة الفيديو
+        closeFullscreen.addEventListener('click', function() {
+            videoFullscreen.style.display = 'none';
+            fullscreenVideo.src = '';
+            document.body.style.overflow = 'auto';
+        });
+
+        // إغلاق نافذة الفيديو عند النقر خارج المحتوى
+        videoFullscreen.addEventListener('click', function(e) {
+            if (e.target === videoFullscreen) {
+                videoFullscreen.style.display = 'none';
+                fullscreenVideo.src = '';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // إغلاق نافذة الفيديو عند الضغط على زر الخلف في المتصفح
+        window.addEventListener('popstate', function() {
+            if (videoFullscreen.style.display === 'flex') {
+                videoFullscreen.style.display = 'none';
+                fullscreenVideo.src = '';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>
