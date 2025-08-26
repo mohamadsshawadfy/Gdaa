@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- الصفحة الرئيسية -->
+  <url>
+    <loc>https://gdaa.vercel.app/</loc>
+    <lastmod>2023-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!--blog -->
+  <url>
+    <loc>https://gdaa.vercel.app/blog.html</loc>
+    <lastmod>2023-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- service1 -->
+  <url>
+    <loc>https://gdaa.vercel.app/service1.html</loc>
+    <lastmod>2023-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- service2 -->
+  <url>
+    <loc>https://gdaa.vercel.app/service2.html</loc>
+    <lastmod>2023-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+    <!-- service3 -->
+  <url>
+    <loc>https://gdaa.vercel.app/service3.html</loc>
+    <lastmod>2023-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+    <!-- service4 -->
+  <url>
+    <loc>https://gdaa.vercel.app/service4.html</loc>
+    <lastmod>2023-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+    <!-- service5 -->
+  <url>
+    <loc>https://gdaa.vercel.app/service5.html</loc>
+    <lastmod>2023-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+    <!-- service6 -->
+  <url>
+    <loc>https://gdaa.vercel.app/service6.html</loc>
+    <lastmod>2023-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+    <!-- service7 -->
+  <url>
+    <loc>https://gdaa.vercel.app/service7.html</loc>
+    <lastmod>2023-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+    <!-- service8 -->
+  <url>
+    <loc>https://gdaa.vercel.app/service8.html</loc>
+    <lastmod>2023-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+    <!-- service9 -->
+  <url>
+    <loc>https://gdaa.vercel.app/service9.html</loc>
+    <lastmod>2023-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+    <!-- service10 -->
+  <url>
+    <loc>https://gdaa.vercel.app/service10.html</loc>
+    <lastmod>2023-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>

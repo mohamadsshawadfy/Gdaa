@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /includes/
+Disallow: /config/
+
+Sitemap: https://gdaa.vercel.app/sitemap.xml
+
+# تعليقات إضافية
+# هذا الملف يوجه محركات البحث إلى الصفحات المسموح بفهرستها
+# الصفحات المسموح بها: الرئيسية، المدونة، وكل صفحات الخدمات
