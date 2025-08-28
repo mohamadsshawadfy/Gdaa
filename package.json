@@ -1,0 +1,16 @@
+
+{
+  "name": "articles-app",
+  "version": "1.0.0",
+  "description": "Articles app with MySQL backend on Vercel",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Nothing to build'",
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "mysql2": "^3.11.0"
+  }
+}
+
